@@ -1,0 +1,22 @@
+---
+- name: install http server
+  hosts: minor-node-2
+  become: yes
+
+  tasks:
+  - name: install httpd
+    yum:
+      name: httpd
+      state: present
+      
+
+  - name: start httpd
+    service:
+      name: httpd
+      state: started
+
+- name: Enable httpd
+  service:
+      name: httpd
+      enabled: yes
+...
