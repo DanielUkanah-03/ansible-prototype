@@ -1,0 +1,11 @@
+---
+- name: Update minor-node-1 servers
+  hosts: minor-node-1
+
+
+  tasks:
+  - name: create director
+    file:
+      path: /home/ec2-user/latest_dir
+      state: directory
+...
