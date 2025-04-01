@@ -4,7 +4,7 @@
 
 
   tasks:
-  - name: create director
+  - name: create directory
     file:
       path: /home/ec2-user/latest_dir
       state: directory
