@@ -1,0 +1,14 @@
+---
+- name: under maintenance
+  hosts: minor-node-3
+  become: yes
+
+  tasks:
+  - name: update maintenance
+    copy:
+      src: maintain.html
+      state: /var/www/html/index.html
+      
+
+  
+...
